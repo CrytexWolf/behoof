@@ -6,7 +6,7 @@
                     <div class="logo__img">
                         <img class="logo" src="/logo.png" alt="">
                     </div>
-                    <span class="logo__text">Лучшие цены<br/>в интернет-магазинах</span>
+                    <div class="logo__text">Лучшие цены<br/>в интернет-магазинах</div>
                 </section>
                 <section class="header__search--nav">
                     <div class="header__search">
@@ -14,10 +14,10 @@
                             <span class="header__selected--text">Каталог товаров</span>
                             <div class="header__selected--img"><img src="/Vector.svg" alt=""></div>
                         </div>
-                        <form class="header__input">
+                        <section class="header__input">
                             <input class="header__input--search" type="text" placeholder="Поиск товаров">
                             <div class="header__input--img"><img class="input--img" src="/Search-normal.svg" alt=""></div>
-                        </form>
+                        </section>
                     </div>
                     <div class="header__links">
                         <a class="links" href=""><img src="/heart.svg" alt=""></a>
@@ -44,11 +44,15 @@ export default {
     .header__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        gap: 30px;
     }
 
     .header__logo {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: 25%;
     }
 
     .logo__img {}
@@ -63,11 +67,13 @@ export default {
     .header__search--nav {
         display: flex;
         justify-content: space-between;
+        width: 75%;
     }
 
     .header__search {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     .header__selected {
@@ -76,8 +82,8 @@ export default {
         justify-content: space-between;
         align-items: center;
         padding: 16px 20px;
-        width: 200px;
         height: 52px;
+        min-width: 200px;
         background: #ff4d4d;
         border-radius: 8px 0 0 8px;
 
@@ -97,11 +103,13 @@ export default {
 
     .header__input {
         position: relative;
+        width: 100%;
     }
 
     .header__input--search {
         border-radius: 0 8px 8px 0;
-        width: 841px;
+        width: 100%;
+        padding-left: 45px;
         height: 52px;
         background: #f2f5f9;
         border: none;
@@ -109,8 +117,8 @@ export default {
 
     .header__input--img {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 10px;
+        top: 10px;
     }
 
     .input--img {
