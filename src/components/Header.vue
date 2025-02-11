@@ -68,6 +68,7 @@ export default {
         display: flex;
         justify-content: space-between;
         width: 75%;
+        gap: 15px;
     }
 
     .header__search {
@@ -126,6 +127,7 @@ export default {
 
     .header__links {
         display: flex;
+        gap: 15px;
     }
 
     .links {
