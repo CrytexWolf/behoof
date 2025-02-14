@@ -59,7 +59,7 @@ export default {
 
     .logo__text {
         font-family: var(--font-family);
-        font-size: 14px;
+        font-size: 1rem;
         line-height: 129%;
         color: #263141;
     }
@@ -90,7 +90,7 @@ export default {
 
         font-family: var(--font-family);
         font-weight: 500;
-        font-size: 16px;
+        font-size: 0.875rem;
         line-height: 125%;
         color: #fff;
     }
