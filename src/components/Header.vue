@@ -39,35 +39,34 @@ export default {
     .header {
         width: 100%;
         height: 76px;
+        border-bottom: 1px solid ;
     }
 
     .header__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 30px;
+        padding: 12px 0;
     }
 
     .header__logo {
         display: flex;
-        justify-content: space-between;
+        gap: 12px;
         align-items: center;
-        width: 25%;
     }
-
-    .logo__img {}
 
     .logo__text {
         font-family: var(--font-family);
         font-size: 1rem;
         line-height: 129%;
         color: #263141;
+        min-width: 164px;
     }
 
     .header__search--nav {
         display: flex;
         justify-content: space-between;
-        width: 75%;
+        width: 100%;
         gap: 15px;
     }
 
@@ -90,9 +89,13 @@ export default {
 
         font-family: var(--font-family);
         font-weight: 500;
-        font-size: 0.875rem;
+        font-size: 1rem;
         line-height: 125%;
         color: #fff;
+    }
+
+    .header__selected--text {
+        font-size: 1.06rem;
     }
 
     .header__selected--img {
