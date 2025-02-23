@@ -15,7 +15,7 @@
                             <div class="header__selected--img"><img src="/Vector.svg" alt=""></div>
                         </div>
                         <section class="header__input">
-                            <input class="header__input--search" type="text" placeholder="Поиск товаров">
+                            <input class="header__input--search" type="search" placeholder="Поиск товаров">
                             <div class="header__input--img"><img class="input--img" src="/Search-normal.svg" alt=""></div>
                         </section>
                     </div>
@@ -39,7 +39,8 @@ export default {
     .header {
         width: 100%;
         height: 76px;
-        border-bottom: 1px solid ;
+        border-bottom: 1px solid #dddddd;
+        background-color: #FDFDFD;
     }
 
     .header__inner {
@@ -52,6 +53,7 @@ export default {
     .header__logo {
         display: flex;
         gap: 12px;
+        height: 52px;
         align-items: center;
     }
 
@@ -66,6 +68,7 @@ export default {
     .header__search--nav {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         gap: 15px;
     }
@@ -77,11 +80,10 @@ export default {
     }
 
     .header__selected {
-        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 16px 20px;
+        padding: 0 20px;
         height: 52px;
         min-width: 200px;
         background: #ff4d4d;
@@ -99,21 +101,18 @@ export default {
     }
 
     .header__selected--img {
-        position: absolute;
-        right: 25px;
-        top: 14px;
         }
 
 
     .header__input {
         position: relative;
-        width: 100%;
+        flex-grow: 1;
     }
 
     .header__input--search {
         border-radius: 0 8px 8px 0;
         width: 100%;
-        padding-left: 45px;
+        padding: 10px 10px 10px 45px;
         height: 52px;
         background: #f2f5f9;
         border: none;
@@ -122,7 +121,8 @@ export default {
     .header__input--img {
         position: absolute;
         left: 10px;
-        top: 10px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .input--img {
@@ -134,10 +134,35 @@ export default {
     }
 
     .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 8px;
-        padding: 14px;
         width: 52px;
         height: 52px;
         background: #f2f5f9;
+    }
+
+    @media (max-width: 375px) {
+        .header {
+            height: 116px;
+        }
+
+        .header__inner {
+            flex-wrap: wrap;
+            padding: 8px 0;
+        }
+
+        .header__input--search {
+            border-radius: 8px;
+        }
+
+        .header__selected {
+            display: none;
+        }
+
+        .header__links {
+            display: none;
+        }
     }
 </style>
